@@ -9,39 +9,28 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.annotation.RequiresApi
 
-@RequiresApi(33)
-class ShaderDisplayView @JvmOverloads constructor(
-  context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : View(context, attrs, defStyleAttr) {
+abstract class BaseShaderView(context: Context) : View(context, null, 0) {
+
+  private val runtimeShader: RuntimeShader
 
   init {
-
+    runtimeShader = createShader()
   }
 
   private val paint = Paint().apply {
     style = Paint.Style.FILL
-    color = Color.RED
+    color = Color.WHITE
   }
 
-  private val runtimeShader = RuntimeShader(
-    """
-      uniform vec2 u_resolution;
-      
-      vec4 main(vec2 coords)
-      {
-        vec2 uv = coords / u_resolution;
-        vec3 col = vec3(0.);
-        col.rg = uv;
-        return vec4(col, 1.0);
-      }
-    """.trimIndent()
-  )
+  abstract fun createShader(): RuntimeShader
+
+  abstract fun updateShader(shader: RuntimeShader, resolution: FloatArray)
 
   override fun onDraw(canvas: Canvas?) {
     super.onDraw(canvas)
     val width = width.toFloat()
     val height = height.toFloat()
-    runtimeShader.setFloatUniform("u_resolution", floatArrayOf(width, height))
+    updateShader(runtimeShader, floatArrayOf(width, height))
     paint.shader = runtimeShader
     canvas?.drawRect(0.0f, 0.0f, width, height, paint)
   }
