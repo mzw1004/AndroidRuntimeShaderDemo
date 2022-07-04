@@ -20,4 +20,9 @@ class MainActivity : AppCompatActivity() {
     val intent = Intent(this, BitmapDisplayActivity::class.java)
     startActivity(intent)
   }
+
+  fun gotoRenderEffect(view: View) {
+    val intent = Intent(this, RenderEffectUsageActivity::class.java)
+    startActivity(intent)
+  }
 }

@@ -17,4 +17,10 @@
         android:layout_height="wrap_content"
         android:text="Bitmap display"
         android:onClick="goBitmapDisplay" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RenderEffect usage"
+        android:onClick="gotoRenderEffect" />
 </LinearLayout>

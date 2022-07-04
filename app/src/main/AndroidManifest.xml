@@ -26,6 +26,8 @@
         <activity android:name=".BasicUsageActivity" />
 
         <activity android:name=".BitmapDisplayActivity" />
+
+        <activity android:name=".RenderEffectUsageActivity" />
     </application>
 
 </manifest>
