@@ -28,6 +28,8 @@
         <activity android:name=".BitmapDisplayActivity" />
 
         <activity android:name=".RenderEffectUsageActivity" />
+
+        <activity android:name=".FilterTestActivity" />
     </application>
 
 </manifest>

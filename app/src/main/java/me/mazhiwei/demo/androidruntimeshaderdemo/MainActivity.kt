@@ -25,4 +25,9 @@ class MainActivity : AppCompatActivity() {
     val intent = Intent(this, RenderEffectUsageActivity::class.java)
     startActivity(intent)
   }
+
+  fun gotoFilterTest(view: View) {
+    val intent = Intent(this, FilterTestActivity::class.java)
+    startActivity(intent)
+  }
 }

@@ -23,4 +23,10 @@
         android:layout_height="wrap_content"
         android:text="RenderEffect usage"
         android:onClick="gotoRenderEffect" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter test"
+        android:onClick="gotoFilterTest" />
 </LinearLayout>
