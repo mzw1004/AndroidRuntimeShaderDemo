@@ -21,7 +21,7 @@ class BasicUsageActivity : AppCompatActivity() {
       
       vec4 main(vec2 coords)
       {
-        vec2 uv = coords / uResolutiona;
+        vec2 uv = coords / uResolution;
         vec3 col = vec3(0.);
         col.rg = uv;
         return vec4(col, 1.0);
