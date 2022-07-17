@@ -7,13 +7,21 @@ import android.graphics.RuntimeShader
 import android.graphics.Shader
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
+import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 
 class BitmapDisplayActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(DisplayView(this))
+    setContentView(DisplayView(this),
+        FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.WRAP_CONTENT,
+            FrameLayout.LayoutParams.WRAP_CONTENT,
+            Gravity.CENTER
+        )
+    )
   }
 
   private inner class DisplayView(context: Context): BaseShaderView(context) {

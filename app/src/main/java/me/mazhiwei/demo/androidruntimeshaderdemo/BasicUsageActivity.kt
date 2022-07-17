@@ -3,13 +3,21 @@ package me.mazhiwei.demo.androidruntimeshaderdemo
 import android.content.Context
 import android.graphics.RuntimeShader
 import android.os.Bundle
+import android.view.Gravity
+import android.widget.FrameLayout.LayoutParams
 import androidx.appcompat.app.AppCompatActivity
 
 class BasicUsageActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(DisplayView(this))
+    setContentView(DisplayView(this),
+        LayoutParams(
+            LayoutParams.WRAP_CONTENT,
+            LayoutParams.WRAP_CONTENT,
+            Gravity.CENTER
+        )
+    )
   }
 
   private inner class DisplayView(context: Context) : BaseShaderView(context) {
