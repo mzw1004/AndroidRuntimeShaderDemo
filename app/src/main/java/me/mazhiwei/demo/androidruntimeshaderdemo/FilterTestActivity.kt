@@ -77,9 +77,5 @@ class FilterTestActivity : AppCompatActivity() {
       shader.setInputShader("uLut", lutShader)
       shader.setFloatUniform("uLutSize", floatArrayOf(lut.width.toFloat(), lut.height.toFloat()))
     }
-
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-      super.onMeasure(widthMeasureSpec, widthMeasureSpec)
-    }
   }
 }

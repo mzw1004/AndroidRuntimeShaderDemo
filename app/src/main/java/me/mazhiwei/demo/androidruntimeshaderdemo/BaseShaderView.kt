@@ -26,6 +26,10 @@ abstract class BaseShaderView(context: Context) : View(context, null, 0) {
 
   abstract fun updateShader(shader: RuntimeShader, resolution: FloatArray)
 
+  override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+    super.onMeasure(widthMeasureSpec, widthMeasureSpec)
+  }
+
   override fun onDraw(canvas: Canvas?) {
     super.onDraw(canvas)
     val width = width.toFloat()
