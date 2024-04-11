@@ -29,4 +29,10 @@
         android:layout_height="wrap_content"
         android:text="Filter test"
         android:onClick="gotoFilterTest" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wallpaper demo"
+        android:onClick="gotoWallpaperDemo" />
 </LinearLayout>

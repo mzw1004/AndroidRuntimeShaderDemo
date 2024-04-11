@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="me.mazhiwei.demo.androidruntimeshaderdemo">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -30,6 +29,8 @@
         <activity android:name=".RenderEffectUsageActivity" />
 
         <activity android:name=".FilterTestActivity" />
+
+        <activity android:name=".WallpaperDemoActivity" />
     </application>
 
 </manifest>

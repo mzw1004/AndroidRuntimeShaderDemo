@@ -30,4 +30,9 @@ class MainActivity : AppCompatActivity() {
     val intent = Intent(this, FilterTestActivity::class.java)
     startActivity(intent)
   }
+
+  fun gotoWallpaperDemo(view: View) {
+    val intent = Intent(this, WallpaperDemoActivity::class.java)
+    startActivity(intent)
+  }
 }

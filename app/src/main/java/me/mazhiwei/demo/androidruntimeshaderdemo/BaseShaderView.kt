@@ -30,12 +30,12 @@ abstract class BaseShaderView(context: Context) : View(context, null, 0) {
     super.onMeasure(widthMeasureSpec, widthMeasureSpec)
   }
 
-  override fun onDraw(canvas: Canvas?) {
+  override fun onDraw(canvas: Canvas) {
     super.onDraw(canvas)
     val width = width.toFloat()
     val height = height.toFloat()
     updateShader(runtimeShader, floatArrayOf(width, height))
     paint.shader = runtimeShader
-    canvas?.drawRect(0.0f, 0.0f, width, height, paint)
+    canvas.drawRect(0.0f, 0.0f, width, height, paint)
   }
 }
